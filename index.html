@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>landing page</title>
+    <title>Udemy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -12,13 +12,62 @@
 </head>
 
 <body>
+
+    <!-- Hidden checkbox (controls open/close) -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Open button -->
+    <label for="menu-toggle" class="hamburger-btn">☰</label>
+
+    <!-- Dark overlay (click to close) -->
+    <label for="menu-toggle" class="overlay"></label>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <!-- Close button -->
+        <label for="menu-toggle" class="close-btn">×</label>
+
+        <!-- Top section -->
+        <div class="menu-top">
+            <a href="one.html">Log in</a>
+            <a href="two.html">Sign up</a>
+            <a href="three.html">Plans & Pricing</a>
+        </div>
+
+        <!-- Explore by Goal section -->
+        <div class="menu-section">
+            <h3>Explore by Goal</h3>
+            <p>Learn AI</p>
+            <p>Launch a new career</p>
+            <p>Prepare for a certification</p>
+            <p>Practice With Role Play</p>
+        </div>
+
+        <div class="menu-divider"></div>
+
+        <!-- Most Popular section -->
+        <div class="menu-section">
+            <h3>Most Popular</h3>
+            <p>Development</p>
+            <p>Business</p>
+            <p>Finance & Accounting</p>
+            <p>IT & Software</p>
+            <p>Office Productivity</p>
+            <p>Personal Development</p>
+            <p>Design</p>
+            <p>Marketing</p>
+            <p>Lifestyle</p>
+            <p>Photography & Video</p>
+            <p>Health & Fitness</p>
+            <p>Music</p>
+            <p>Teaching & Academics</p>
+        </div>
+    </div>
+
+
     <!-- header -->
     <header>
-        <div class="unknown">
-            <span>
-                <i class="fa-solid fa-list"></i>
-            </span>
-        </div>
+
 
         <div class="logo-udemy">
             <img src="https://frontends.udemycdn.com/frontends-homepage/staticx/udemy/images/v7/logo-udemy.svg"
@@ -52,12 +101,14 @@
 
                 </div>
             </div>
+
+
         </div>
 
         <input class="search" type="search" placeholder="Search for anything" name="" id="search">
 
         <div class="child1">
-            <p>Plans & Pricing</p>
+            <a href="three.html"><span>Plans & Pricing</span></a>
             <p>udemy Business</p>
             <p>Teach on udemy</p>
 
@@ -238,9 +289,9 @@
                     </div>
 
                     <!-- <div class="c-g">
-                                    <span>Natural Language Processing (NLP)</span>
-                                    <div>869,000+ learners</div>
-                                </div> -->
+                                        <span>Natural Language Processing (NLP)</span>
+                                        <div>869,000+ learners</div>
+                                    </div> -->
                 </div>
 
                 <div class="card">
@@ -498,7 +549,8 @@
             <div class="card">
                 <!-- CARD 1 -->
                 <div class="card1">
-                    <img src="course-image.jpg" alt="Course Image" />
+                    <img src="blob:chrome-extension://agionbommeaifngbhincahgmoflcikhm/f378e49d-d283-44e7-afb2-fb717822ea40"
+                        alt="Course Image" />
                     <h4>100 Days of Code: The Complete Python Pro...</h4>
                     <p>Dr. Angela Yu, Developer And Lead</p>
 
@@ -536,7 +588,7 @@
 
                 <!-- CARD 2 -->
                 <div class="card1">
-                    <img src="blob:chrome-extension://agionbommeaifngbhincahgmoflcikhm/bacefbd7-6f7e-4228-8149-866e8e95ae3e"
+                    <img src="blob:chrome-extension://agionbommeaifngbhincahgmoflcikhm/5de0576b-428e-4d3b-8924-fd1576862872"
                         alt="Course Image" />
                     <h4>100 Days of Code: The Complete Python Pro...</h4>
                     <p>Dr. Angela Yu, Developer And Lead</p>

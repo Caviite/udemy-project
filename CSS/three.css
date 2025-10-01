@@ -1,0 +1,540 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+   }
+
+   /* Main container */
+   .pricing-section {
+       max-width: 1200px;
+       margin: auto;
+       margin-top: 30px;
+   }
+
+   /* Header */
+   .pricing-header {
+       text-align: center;
+       margin-bottom: 40px;
+   }
+
+   .pricing-header h1 {
+       font-size: 48px;
+       color: #1c1d1f;
+       margin-bottom: 15px;
+   }
+
+   .pricing-header p {
+       font-size: 18px;
+       color: #6a6f73;
+       line-height: 1.5;
+   }
+
+   /* Cards container */
+   .plans-container {
+       display: flex;
+       gap: 25px;
+       justify-content: center;
+   }
+
+   /* Individual card */
+   .plan-card {
+       background-color: white;
+       border-radius: 8px;
+       width: 32%;
+       padding: 0;
+       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+       overflow: hidden;
+       border-top: #8710d8 thick solid;
+       /* height: 6px; */
+   }
+
+   /* Card content */
+   .plan-content {
+       padding: 30px;
+   }
+
+   /* Plan title section */
+   .plan-title {
+       margin-bottom: 25px;
+   }
+
+   .plan-title h2 {
+       font-size: 24px;
+       color: #1c1d1f;
+       margin-bottom: 5px;
+   }
+
+   .plan-subtitle {
+       font-size: 14px;
+       color: #6a6f73;
+       margin-bottom: 15px;
+   }
+
+   .plan-users {
+       display: flex;
+       align-items: center;
+       gap: 8px;
+       color: #6a6f73;
+       font-size: 14px;
+   }
+
+   /* User icon */
+   .plan-users::before {
+       content: "👤";
+       font-size: 16px;
+   }
+
+   /* Pricing section */
+   .plan-pricing {
+       margin: 25px 0;
+   }
+
+   .plan-pricing h3 {
+       font-size: 20px;
+       color: #1c1d1f;
+       margin-bottom: 5px;
+   }
+
+   .plan-pricing p {
+       font-size: 14px;
+       color: #6a6f73;
+   }
+
+   /* Button */
+   .plan-button {
+       width: 100%;
+       padding: 15px;
+       background-color: #a435f0;
+       color: white;
+       border: none;
+       border-radius: 4px;
+       font-size: 16px;
+       font-weight: 700;
+       cursor: pointer;
+       margin-bottom: 25px;
+       transition: background-color 0.3s ease;
+   }
+
+   .plan-button:hover {
+       background-color: #8710d8;
+   }
+
+   /* Features list */
+   .plan-features {
+       list-style: none;
+   }
+
+   .plan-features li {
+       display: flex;
+       align-items: flex-start;
+       gap: 12px;
+       margin-bottom: 15px;
+       font-size: 14px;
+       color: #1c1d1f;
+   }
+
+   /* Checkmark icon */
+   .plan-features li::before {
+       content: "✓";
+       color: #5cb85c;
+       font-weight: 700;
+       font-size: 16px;
+       flex-shrink: 0;
+
+   }
+
+   .c-p {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-top: 20px;
+       text-decoration: none;
+       font-size: 15px;
+       font-weight: 700;
+       color: #7228d2;
+   }
+
+   @media (max-width: 768px) {
+       .pricing-header h1 {
+           font-size: 36px;
+       }
+
+       .pricing-header p {
+           font-size: 16px;
+       }
+
+       .plans-container {
+           flex-direction: column;
+           align-items: center;
+       }
+
+       .plan-card {
+           width: 100%;
+           max-width: 500px;
+       }
+   }
+
+   @media (max-width: 425px) {
+       .pricing-header h1 {
+           font-size: 28px;
+       }
+
+       .pricing-header p {
+           font-size: 15px;
+       }
+
+       .plan-content {
+           padding: 20px;
+       }
+
+       .plan-title h2 {
+           font-size: 20px;
+       }
+
+       .plan-pricing h3 {
+           font-size: 18px;
+       }
+   }
+
+   @media (max-width: 375px) {
+       .pricing-header h1 {
+           font-size: 24px;
+       }
+
+       .plan-content {
+           padding: 18px;
+       }
+   }
+
+   @media (max-width: 320px) {
+       .pricing-header h1 {
+           font-size: 22px;
+       }
+
+       .plan-content {
+           padding: 15px;
+       }
+
+       .plan-button {
+           font-size: 14px;
+           padding: 12px;
+       }
+   }
+
+   /* sec three */
+   .sec-five {
+       background-color: #f6f7f9;
+       padding: 8px 0px 50px;
+       margin-top: 30px;
+   }
+
+   /* sec four */
+   .faq {
+       background-color: #f6f7f9;
+       /* margin-top: 50px; */
+       margin-bottom: 50px;
+       padding: 8px 0px 50px;
+   }
+
+   .faq h2 {
+       text-align: center;
+       font-size: 30px;
+       padding-top: 50px;
+       cursor: pointer;
+   }
+
+   .faq-block:hover .ans {
+       display: block;
+   }
+
+   .ques {
+       margin-top: 20px;
+       cursor: pointer;
+       margin-left: 430px;
+       color: #2a2b3f;
+       font-size: 18px;
+   }
+
+   .ans {
+       display: none;
+       width: 43%;
+       margin-left: 430px;
+       font-size: 13px;
+       color: #636463;
+       margin-top: 10px;
+   }
+
+   @media (max-width: 768px) {
+
+       .ques,
+       .ans,
+       .faq hr {
+           margin-left: 50px;
+           width: 80%;
+       }
+
+       .faq h2 {
+           font-size: 26px;
+           padding-top: 40px;
+       }
+
+       .ques {
+           font-size: 16px;
+       }
+
+       .ans {
+           font-size: 13px;
+       }
+   }
+
+   @media (max-width: 425px) {
+
+       .ques,
+       .ans,
+       .faq hr {
+           margin-left: 20px;
+           width: 90%;
+       }
+
+       .faq h2 {
+           font-size: 22px;
+           padding-top: 30px;
+       }
+
+       .ques {
+           font-size: 15px;
+       }
+
+       .ans {
+           font-size: 12px;
+       }
+   }
+
+   @media (max-width: 375px) {
+
+       .ques,
+       .ans,
+       .faq hr {
+           margin-left: 15px;
+           width: 92%;
+       }
+
+       .faq h2 {
+           font-size: 20px;
+           padding-top: 25px;
+       }
+
+       .ques {
+           font-size: 14px;
+       }
+
+       .ans {
+           font-size: 12px;
+       }
+   }
+
+   @media (max-width: 320px) {
+
+       .ques,
+       .ans,
+       .faq hr {
+           margin-left: 10px;
+           width: 94%;
+       }
+
+       .faq h2 {
+           font-size: 18px;
+           padding-top: 20px;
+       }
+
+       .ques {
+           font-size: 13px;
+       }
+
+       .ans {
+           font-size: 11px;
+       }
+   }
+
+
+   .testimonials {
+       /* max-width: 1200px; */
+       margin: 50px auto;
+       padding: 0 20px;
+   }
+
+   .testimonials h1 {
+       text-align: center;
+       font-size: 28px;
+       color: #2d2f31;
+       margin-bottom: 40px;
+   }
+
+   .testimonial-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 20px;
+   }
+
+   .testimonial-card {
+       border: 1px solid #eee;
+       border-radius: 10px;
+       padding: 20px;
+       background-color: #f9f9f9;
+       position: relative;
+   }
+
+   .quote {
+       font-size: 40px;
+       color: #333;
+       margin: 0 0 10px;
+       line-height: 0.5;
+   }
+
+   .testimonial-card p {
+       margin: 10px 0;
+   }
+
+   .testimonial-card a {
+       color: #5624d0;
+       text-decoration: none;
+       font-weight: 500;
+       display: inline-block;
+       margin-top: 15px;
+   }
+
+   .testimonial-card .logo {
+       display: flex;
+       align-items: center;
+       margin-top: 15px;
+   }
+
+   .testimonial-card .logo img {
+       width: 24px;
+       height: 24px;
+       margin-right: 10px;
+   }
+
+   .person {
+       display: flex;
+       align-items: center;
+       margin-top: 15px;
+   }
+
+   .person img {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       margin-right: 10px;
+   }
+
+   .name {
+       font-weight: bold;
+       margin-bottom: 2px;
+   }
+
+   .role {
+       font-size: 12px;
+       color: #666;
+   }
+
+   @media (max-width: 768px) {
+       .testimonials {
+           padding: 0 15px;
+       }
+
+       .testimonials h1 {
+           font-size: 24px;
+       }
+
+       .testimonial-grid {
+           grid-template-columns: 1fr 1fr;
+           gap: 15px;
+       }
+
+       .testimonial-card {
+           padding: 15px;
+       }
+
+       .testimonial-card .quote {
+           font-size: 30px;
+       }
+   }
+
+
+   @media (max-width: 425px) {
+       .testimonials h1 {
+           font-size: 22px;
+       }
+
+       .testimonial-grid {
+           grid-template-columns: 1fr;
+       }
+
+       .testimonial-card {
+           padding: 15px;
+       }
+
+       .testimonial-card p,
+       .testimonial-card .role {
+           font-size: 14px;
+       }
+
+       .testimonial-card .link {
+           font-size: 14px;
+       }
+   }
+
+   @media (max-width: 375px) {
+       .testimonials {
+           padding: 0 10px;
+       }
+
+       .testimonial-card {
+           padding: 12px;
+       }
+
+       .testimonial-card p,
+       .testimonial-card .role,
+       .testimonial-card .link {
+           font-size: 13px;
+       }
+
+       .testimonial-card .quote {
+           font-size: 26px;
+       }
+
+       .person img {
+           width: 35px;
+           height: 35px;
+       }
+   }
+
+   @media (max-width: 320px) {
+       .testimonials h1 {
+           font-size: 20px;
+       }
+
+       .testimonial-card {
+           padding: 10px;
+       }
+
+       .testimonial-card p,
+       .testimonial-card .role,
+       .testimonial-card .link {
+           font-size: 12px;
+       }
+
+       .testimonial-card .quote {
+           font-size: 24px;
+       }
+
+       .person img {
+           width: 30px;
+           height: 30px;
+       }
+   }

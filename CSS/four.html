@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            background-color: #f7f9fa;
+            padding: 40px 20px;
+        }
+
+        /* Main container */
+        .pricing-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .pricing-header h1 {
+            font-size: 48px;
+            color: #1c1d1f;
+            margin-bottom: 15px;
+        }
+
+        .pricing-header p {
+            font-size: 18px;
+            color: #6a6f73;
+            line-height: 1.5;
+        }
+
+        /* Cards container */
+        .plans-container {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        /* Individual card */
+        .plan-card {
+            background-color: white;
+            border-radius: 8px;
+            width: 32%;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Top colored border */
+        .plan-header {
+            height: 6px;
+            background-color: #a435f0;
+        }
+
+        /* Card content */
+        .plan-content {
+            padding: 30px;
+        }
+
+        /* Plan title section */
+        .plan-title {
+            margin-bottom: 25px;
+        }
+
+        .plan-title h2 {
+            font-size: 24px;
+            color: #1c1d1f;
+            margin-bottom: 5px;
+        }
+
+        .plan-subtitle {
+            font-size: 14px;
+            color: #6a6f73;
+            margin-bottom: 15px;
+        }
+
+        .plan-users {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #6a6f73;
+            font-size: 14px;
+        }
+
+        /* User icon */
+        .plan-users::before {
+            content: "👤";
+            font-size: 16px;
+        }
+
+        /* Pricing section */
+        .plan-pricing {
+            margin: 25px 0;
+        }
+
+        .plan-pricing h3 {
+            font-size: 20px;
+            color: #1c1d1f;
+            margin-bottom: 5px;
+        }
+
+        .plan-pricing p {
+            font-size: 14px;
+            color: #6a6f73;
+        }
+
+        /* Button */
+        .plan-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #a435f0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .plan-button:hover {
+            background-color: #8710d8;
+        }
+
+        /* Features list */
+        .plan-features {
+            list-style: none;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #1c1d1f;
+        }
+
+        /* Checkmark icon */
+        .plan-features li::before {
+            content: "✓";
+            color: #5cb85c;
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ===========================
+           RESPONSIVE - Mobile screens
+           =========================== */
+
+        /* Tablets (768px and below) - Stack cards vertically */
+        @media (max-width: 768px) {
+            .pricing-header h1 {
+                font-size: 36px;
+            }
+
+            .pricing-header p {
+                font-size: 16px;
+            }
+
+            .plans-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .plan-card {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        /* Small phones (425px and below) */
+        @media (max-width: 425px) {
+            .pricing-header h1 {
+                font-size: 28px;
+            }
+
+            .pricing-header p {
+                font-size: 15px;
+            }
+
+            .plan-content {
+                padding: 20px;
+            }
+
+            .plan-title h2 {
+                font-size: 20px;
+            }
+
+            .plan-pricing h3 {
+                font-size: 18px;
+            }
+        }
+
+        /* Very small phones (375px and below) */
+        @media (max-width: 375px) {
+            .pricing-header h1 {
+                font-size: 24px;
+            }
+
+            .plan-content {
+                padding: 18px;
+            }
+        }
+
+        /* Tiny phones (320px and below) */
+        @media (max-width: 320px) {
+            .pricing-header h1 {
+                font-size: 22px;
+            }
+
+            .plan-content {
+                padding: 15px;
+            }
+
+            .plan-button {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-section">
+        <!-- Header -->
+        <div class="pricing-header">
+            <h1>Choose a plan for success</h1>
+            <p>Don't want to buy courses one by one? Pick a plan to help you, your team, or your organization achieve outcomes faster.</p>
+        </div>
+
+        <!-- Plans Container -->
+        <div class="plans-container">
+            
+            <!-- Personal Plan -->
+            <div class="plan-card">
+                <div class="plan-header"></div>
+                <div class="plan-content">
+                    <div class="plan-title">
+                        <h2>Personal Plan</h2>
+                        <p class="plan-subtitle">For you</p>
+                        <div class="plan-users">Individual</div>
+                    </div>
+
+                    <div class="plan-pricing">
+                        <h3>Starting at $7,500.00 per month</h3>
+                        <p>Billed monthly or annually. Cancel anytime.</p>
+                    </div>
+
+                    <button class="plan-button">Try it free →</button>
+
+                    <ul class="plan-features">
+                        <li>Access to 26,000+ top courses</li>
+                        <li>Certification prep</li>
+                        <li>Goal-focused recommendations</li>
+                        <li>AI-powered coding exercises</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Team Plan -->
+            <div class="plan-card">
+                <div class="plan-header"></div>
+                <div class="plan-content">
+                    <div class="plan-title">
+                        <h2>Team Plan</h2>
+                        <p class="plan-subtitle">For your team</p>
+                        <div class="plan-users">2 to 50 people</div>
+                    </div>
+
+                    <div class="plan-pricing">
+                        <h3>₦18,000 a month per user</h3>
+                        <p>Billed annually. Cancel anytime.</p>
+                    </div>
+
+                    <button class="plan-button">Try it free →</button>
+
+                    <ul class="plan-features">
+                        <li>Access to 13,000+ top courses</li>
+                        <li>Certification prep</li>
+                        <li>Goal-focused recommendations</li>
+                        <li>AI-powered coding exercises</li>
+                        <li>Analytics and adoption reports</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="plan-card">
+                <div class="plan-header"></div>
+                <div class="plan-content">
+                    <div class="plan-title">
+                        <h2>Enterprise Plan</h2>
+                        <p class="plan-subtitle">For your whole organization</p>
+                        <div class="plan-users">More than 20 people</div>
+                    </div>
+
+                    <div class="plan-pricing">
+                        <h3>Contact sales for pricing</h3>
+                    </div>
+
+                    <button class="plan-button">Request a demo →</button>
+
+                    <ul class="plan-features">
+                        <li>Access to 30,000+ top courses</li>
+                        <li>Certification prep</li>
+                        <li>Goal-focused recommendations</li>
+                        <li>AI-powered coding exercises</li>
+                        <li>Advanced analytics and insights</li>
+                        <li>Dedicated customer success team</li>
+                        <li>International course collection featuring 15 languages</li>
+                        <li>Customizable content</li>
+                        <li>Hands-on tech training with add-on</li>
+                        <li>Strategic implementation services with add-on</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
