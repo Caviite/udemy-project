@@ -154,3 +154,71 @@ input {
     }
 }
 
+/* Tablet and mobile responsiveness */
+@media (max-width: 1024px) {
+    .log {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .log-form {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .log h1 {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .log input {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .continue-btn {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px 0;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .social-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sign-up,
+    .org {
+        padding: 20px;
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* Smaller mobile screens (e.g. iPhone SE, small Android phones) */
+@media (max-width: 480px) {
+    .log h1 {
+        font-size: 20px;
+    }
+
+    .log input,
+    .continue-btn {
+        font-size: 14px;
+    }
+
+    .social-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
