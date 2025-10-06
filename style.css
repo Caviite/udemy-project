@@ -254,6 +254,10 @@ header {
     text-decoration: none;
     color: black;
 }
+/* 
+.child1:hover>a{
+    color: #6d28d2;
+} */
 
 .Login {
     padding: 10px 20px 10px 20px;

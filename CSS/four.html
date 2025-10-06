@@ -1,337 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Plans</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-            background-color: #f7f9fa;
-            padding: 40px 20px;
-        }
-
-        /* Main container */
-        .pricing-section {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        .pricing-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .pricing-header h1 {
-            font-size: 48px;
-            color: #1c1d1f;
-            margin-bottom: 15px;
-        }
-
-        .pricing-header p {
-            font-size: 18px;
-            color: #6a6f73;
-            line-height: 1.5;
-        }
-
-        /* Cards container */
-        .plans-container {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-        }
-
-        /* Individual card */
-        .plan-card {
-            background-color: white;
-            border-radius: 8px;
-            width: 32%;
-            padding: 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        /* Top colored border */
-        .plan-header {
-            height: 6px;
-            background-color: #a435f0;
-        }
-
-        /* Card content */
-        .plan-content {
-            padding: 30px;
-        }
-
-        /* Plan title section */
-        .plan-title {
-            margin-bottom: 25px;
-        }
-
-        .plan-title h2 {
-            font-size: 24px;
-            color: #1c1d1f;
-            margin-bottom: 5px;
-        }
-
-        .plan-subtitle {
-            font-size: 14px;
-            color: #6a6f73;
-            margin-bottom: 15px;
-        }
-
-        .plan-users {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #6a6f73;
-            font-size: 14px;
-        }
-
-        /* User icon */
-        .plan-users::before {
-            content: "👤";
-            font-size: 16px;
-        }
-
-        /* Pricing section */
-        .plan-pricing {
-            margin: 25px 0;
-        }
-
-        .plan-pricing h3 {
-            font-size: 20px;
-            color: #1c1d1f;
-            margin-bottom: 5px;
-        }
-
-        .plan-pricing p {
-            font-size: 14px;
-            color: #6a6f73;
-        }
-
-        /* Button */
-        .plan-button {
-            width: 100%;
-            padding: 15px;
-            background-color: #a435f0;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            margin-bottom: 25px;
-            transition: background-color 0.3s ease;
-        }
-
-        .plan-button:hover {
-            background-color: #8710d8;
-        }
-
-        /* Features list */
-        .plan-features {
-            list-style: none;
-        }
-
-        .plan-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 15px;
-            font-size: 14px;
-            color: #1c1d1f;
-        }
-
-        /* Checkmark icon */
-        .plan-features li::before {
-            content: "✓";
-            color: #5cb85c;
-            font-weight: 700;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        /* ===========================
-           RESPONSIVE - Mobile screens
-           =========================== */
-
-        /* Tablets (768px and below) - Stack cards vertically */
-        @media (max-width: 768px) {
-            .pricing-header h1 {
-                font-size: 36px;
-            }
-
-            .pricing-header p {
-                font-size: 16px;
-            }
-
-            .plans-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .plan-card {
-                width: 100%;
-                max-width: 500px;
-            }
-        }
-
-        /* Small phones (425px and below) */
-        @media (max-width: 425px) {
-            .pricing-header h1 {
-                font-size: 28px;
-            }
-
-            .pricing-header p {
-                font-size: 15px;
-            }
-
-            .plan-content {
-                padding: 20px;
-            }
-
-            .plan-title h2 {
-                font-size: 20px;
-            }
-
-            .plan-pricing h3 {
-                font-size: 18px;
-            }
-        }
-
-        /* Very small phones (375px and below) */
-        @media (max-width: 375px) {
-            .pricing-header h1 {
-                font-size: 24px;
-            }
-
-            .plan-content {
-                padding: 18px;
-            }
-        }
-
-        /* Tiny phones (320px and below) */
-        @media (max-width: 320px) {
-            .pricing-header h1 {
-                font-size: 22px;
-            }
-
-            .plan-content {
-                padding: 15px;
-            }
-
-            .plan-button {
-                font-size: 14px;
-                padding: 12px;
-            }
-        }
-    </style>
+    <title>udemy-business</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../style.css   ">
+    <link rel="stylesheet" href="four.css">
 </head>
+
 <body>
 
-    <div class="pricing-section">
-        <!-- Header -->
-        <div class="pricing-header">
-            <h1>Choose a plan for success</h1>
-            <p>Don't want to buy courses one by one? Pick a plan to help you, your team, or your organization achieve outcomes faster.</p>
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger-btn">☰</label>
+
+    <label for="menu-toggle" class="overlay"></label>
+
+    <div class="mobile-menu">
+        <!-- Close button -->
+        <label for="menu-toggle" class="close-btn">×</label>
+
+        <!-- Top section -->
+        <div class="menu-top">
+            <a href="one.html">Log in</a>
+            <a href="two.html">Sign up</a>
+            <a href="three.html">Plans & Pricing</a>
         </div>
 
-        <!-- Plans Container -->
-        <div class="plans-container">
-            
-            <!-- Personal Plan -->
-            <div class="plan-card">
-                <div class="plan-header"></div>
-                <div class="plan-content">
-                    <div class="plan-title">
-                        <h2>Personal Plan</h2>
-                        <p class="plan-subtitle">For you</p>
-                        <div class="plan-users">Individual</div>
-                    </div>
+        <!-- Explore by Goal section -->
+        <div class="menu-section">
+            <h3>Explore by Goal</h3>
+            <p>Learn AI</p>
+            <p>Launch a new career</p>
+            <p>Prepare for a certification</p>
+            <p>Practice With Role Play</p>
+        </div>
 
-                    <div class="plan-pricing">
-                        <h3>Starting at $7,500.00 per month</h3>
-                        <p>Billed monthly or annually. Cancel anytime.</p>
-                    </div>
+        <div class="menu-divider"></div>
 
-                    <button class="plan-button">Try it free →</button>
-
-                    <ul class="plan-features">
-                        <li>Access to 26,000+ top courses</li>
-                        <li>Certification prep</li>
-                        <li>Goal-focused recommendations</li>
-                        <li>AI-powered coding exercises</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Team Plan -->
-            <div class="plan-card">
-                <div class="plan-header"></div>
-                <div class="plan-content">
-                    <div class="plan-title">
-                        <h2>Team Plan</h2>
-                        <p class="plan-subtitle">For your team</p>
-                        <div class="plan-users">2 to 50 people</div>
-                    </div>
-
-                    <div class="plan-pricing">
-                        <h3>₦18,000 a month per user</h3>
-                        <p>Billed annually. Cancel anytime.</p>
-                    </div>
-
-                    <button class="plan-button">Try it free →</button>
-
-                    <ul class="plan-features">
-                        <li>Access to 13,000+ top courses</li>
-                        <li>Certification prep</li>
-                        <li>Goal-focused recommendations</li>
-                        <li>AI-powered coding exercises</li>
-                        <li>Analytics and adoption reports</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Enterprise Plan -->
-            <div class="plan-card">
-                <div class="plan-header"></div>
-                <div class="plan-content">
-                    <div class="plan-title">
-                        <h2>Enterprise Plan</h2>
-                        <p class="plan-subtitle">For your whole organization</p>
-                        <div class="plan-users">More than 20 people</div>
-                    </div>
-
-                    <div class="plan-pricing">
-                        <h3>Contact sales for pricing</h3>
-                    </div>
-
-                    <button class="plan-button">Request a demo →</button>
-
-                    <ul class="plan-features">
-                        <li>Access to 30,000+ top courses</li>
-                        <li>Certification prep</li>
-                        <li>Goal-focused recommendations</li>
-                        <li>AI-powered coding exercises</li>
-                        <li>Advanced analytics and insights</li>
-                        <li>Dedicated customer success team</li>
-                        <li>International course collection featuring 15 languages</li>
-                        <li>Customizable content</li>
-                        <li>Hands-on tech training with add-on</li>
-                        <li>Strategic implementation services with add-on</li>
-                    </ul>
-                </div>
-            </div>
-
+        <!-- Most Popular section -->
+        <div class="menu-section">
+            <h3>Most Popular</h3>
+            <p>Development</p>
+            <p>Business</p>
+            <p>Finance & Accounting</p>
+            <p>IT & Software</p>
+            <p>Office Productivity</p>
+            <p>Personal Development</p>
+            <p>Design</p>
+            <p>Marketing</p>
+            <p>Lifestyle</p>
+            <p>Photography & Video</p>
+            <p>Health & Fitness</p>
+            <p>Music</p>
+            <p>Teaching & Academics</p>
         </div>
     </div>
 
+    <header>
+
+        <div class="logo-udemy">
+            <img src="https://business.udemy.com/wp-content/uploads/2021/04/udemy-business-logo.svg" alt="udemy">
+        </div>
+
+        <div class="child1">
+            <p>What we do</p>
+            <p>How we do it</p>
+            <p>Resources</p>
+            <p>Plans</p>
+            <p>AI Transformation <span>✨</span></p>
+
+            <span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+            <a href=""><button class="Login">Log in</button></a>
+            <a href="two.html"><button class="Signup">Sign up</button></a>
+            <button class="globe-btn">
+                <i class="fa-solid fa-globe"></i>
+            </button>
+
+        </div>
+
+        <div class="unknown">
+            <span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+        </div>
+    </header>
+
+    <!-- section 1 -->
+    <section>
+        <div>
+            <div class="learn">
+                <div>
+                    <h1>The learning platform for AI skills and business transformation</h1>
+                </div>
+
+                <div class="bus">
+                    <p>When people grow, business does too.</p>
+
+                    <div>
+                        <button class="g-s">Get started</button>
+                        <button class="c-p">Compare plans</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="overlay">
+                    <div class="play-button">
+                        <div class="triangle"></div>
+                    </div>
+                    <div class="text">
+                        <p>An AI learning journey<br>like no other</p>
+                        <span>0:30</span>
+                    </div>
+                </div>
+                <img src="https://business.udemy.com/wp-content/uploads/2025/09/bg-hero-home-brand-campaign-person.png"
+                    alt="Woman smiling" class="person">
+            </div>
+        </div>
+    </section>
+
+    <!-- sec 2 -->
+    <section>
+        <div>
+            <div class="logo">
+                <div class="logo-track">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/01-mattel-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/02-vimeo-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/03-fender-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/04-aflac-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/05-vw-logo-gray.svg" alt="">-
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/06-tcs-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/07-bosch-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/08-cisco-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/10-samsung-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/11-citi-bank-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/12-infosys-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/13-ford-logo-gray.svg." alt="">
+                    <!-- semless loop -->
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/01-mattel-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/02-vimeo-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/03-fender-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/04-aflac-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/05-vw-logo-gray.svg" alt="">-
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/06-tcs-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/07-bosch-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/08-cisco-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/10-samsung-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/11-citi-bank-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/12-infosys-logo-gray.svg" alt="">
+                    <img src="https://business.udemy.com/wp-content/uploads/2024/11/13-ford-logo-gray.svg." alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sec 3 -->
+    <section>
+        <div class="what">
+            <h2>
+                Whatever your goal,the path starts here
+            </h2>
+        </div>
+    </section>
+    <!-- sec 4 -->
+    <section>
+        <div class="carousel-container">
+            <div class="nav-buttons">
+                <a href="" class="nav-btn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    </svg>
+                </a>
+                <a href="" class="nav-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="carousel-grid">
+                <div class="sub card-1">
+                    <div class="card-label">Enterprise-wide training</div>
+
+                    <div class="card-image">
+                        <img src="../MEDIA/imgi_51_slider-enterprise-wide-training.jpg.webp" alt="card-image">
+                    </div>
+
+                    <div class="card-info">
+                        <h3>
+                            Upskill your entire organization
+                        </h3>
+
+                        <p>Cultivate learning culture that keeps every team engaged and growing
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub card-2">
+                    <div class="card-label">Certification preparation</div>
+
+                    <div class="card-image">
+                        <img src="../MEDIA/13c1d6d5-96bf-4f6d-a79f-9c92d7df4308.webp" alt="card-image">
+                    </div>
+
+                    <div class="card-info">
+                        <h3>
+                            Develop and validate skills
+                        </h3>
+
+                        <p>Grow employees skills with certification prep courcesand badges to share their
+                            accomplishments once they've passed their exam
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub card-3">
+                    <div class="card-label">AI Upskilling</div>
+
+                    <div class="card-image">
+                        <img src="../MEDIA/082e49bf-fd7d-41a8-8fe1-36f7743b657c.webp" alt="card-image">
+                    </div>
+
+                    <div class="card-info">
+                        <h3>
+                            Boost productivity with GenAI
+                        </h3>
+
+                        <p>Use our AI Starter Paths and new AI packages to sell AI fluency across the entire
+                            organization.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub card-4">
+                    <div class="card-label">Leadership development</div>
+
+                    <div class="card-image">
+                        <img src="../MEDIA/64a22849-077c-4c2a-b5e6-5aee535dd42d.webp" alt="card-image">
+                    </div>
+
+                    <div class="card-info">
+                        <h3>
+                            Identify and enpower leaders
+                        </h3>
+
+                        <p>Create an enviroment of trust and inclusion by offering tools to lead, motivate, and, engage.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sub card-5">
+                    <div class="card-label">Tech Team Training</div>
+
+                    <div class="card-image">
+                        <img src="../MEDIA/dda71d60-3352-44ff-947f-a52009cbdb21.webp" alt="card-image">
+                    </div>
+
+                    <div class="card-info">
+                        <h3>
+                            Fast-track teach development
+                        </h3>
+
+                        <p>Close skills gaps, prep teams for certifications, and drive digital transformation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sec 5 -->
+    <section>
+        <div class="b-c">
+            <div class="skills">
+                <h2>
+                    Modern skills need a modern learning approach
+                </h2>
+
+                <p>
+                    Learning solutions shouldn’t be one-size-fits-all. For effective training, you need the right skills
+                    and the right modalities. That’s where we come in.
+                </p>
+            </div>
+
+            <div>
+                <img src="../MEDIA/imgi_57_learning-ecosystem-var-c.jpg.webp" alt="">
+            </div>
+
+            <div class="container">
+                <div class="box">
+                    <div class="arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <h3>On-Demand Learning</h3>
+                    <p>Provide anytime access to the latest business, tech, leadership, and soft skills courses all in
+                        one learning
+                        platform.</p>
+                </div>
+
+                <div class="box">
+                    <div class="arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <h3>Hands-On Learning</h3>
+                    <p>Boost tech skills faster with Udemy Business Pro learn-by-doing technical projects.</p>
+                </div>
+
+                <div class="box">
+                    <div class="arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <h3>Cohort Learning</h3>
+                    <p>Grow your leaders with the Udemy Business Leadership Academy guided, self-paced programs.</p>
+                </div>
+
+                <div class="box">
+                    <div class="arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <h3>Professional Services</h3>
+                    <p>Get the expertise and support you need to achieve your goals faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sec 6 -->
+    <section class="tour-section">
+        <div>
+            <img src="https://business.udemy.com/wp-content/uploads/2024/10/module-product-tour-perspective-v2.png.webp"
+                alt="">
+        </div>
+        <div class="content-side">
+            <h1>Tour the Udemy Business platform</h1>
+            <p>Take the interactive tour to see how our platform can transform the way your team learns and grows.</p>
+            <a href="#" class="tour-btn">Start tour</a>
+        </div>
+    </section>
+    <!-- sec 7 -->
+    <section>
+        <div class="exp">
+            <h2>Don’t just take it from us</h2>
+
+            <div class="profile-container">
+                <div class="logo-circle">
+                    <img src="../MEDIA/gen3.svg" alt="Genpact">
+                </div>
+                <img src="../MEDIA/gen2.webp" alt="Profile" class="profile-img">
+            </div>
+
+            <div class="testimonial-section">
+                <p class="testimonial-quote">
+                    "We wanted a holistic, easy-to-use, cloud-based platform where we could curate our own GenAI program
+                    — all from a partner who understood the industry landscape. We chose Udemy."
+                </p>
+                <p class="author-name">Thaiyal Nayaki Sathyamoorthy</p>
+                <p class="author-title">Assistant Manager of L&D for Data and AI, Genpact</p>
+            </div>
+        </div>
+    </section>
+    <!-- sec 8 -->
+    <section class="ai-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                Accelerate your skills<br>journey <span class="bold">with AI</span>
+            </h2>
+            <a href="#" class="demo-btn">Request a demo</a>
+        </div>
+
+        <div class="cards-grid">
+            <div class="resource-card card-1">
+                <div class="card-image">
+                    <img src="https://business.udemy.com/wp-content/uploads/2025/08/devoteam-resource-image.png.webp"
+                        alt="">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">How Devoteam Rapidly Upskilled its Workforce in AI</h3>
+                    <a href="#" class="card-link">Read case study →</a>
+                </div>
+            </div>
+
+            <div class="resource-card card-2">
+                <div class="card-image">
+                    <img src="https://business.udemy.com/wp-content/uploads/2025/05/live-demo-resource-image.png.webp"
+                        alt="">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Get a glimpse into the future of learning: Udemy AI</h3>
+                    <a href="#" class="card-link">Watch now →</a>
+                </div>
+            </div>
+
+            <div class="resource-card card-3">
+                <div class="card-image">
+                    <img src="https://business.udemy.com/wp-content/uploads/2025/05/ld-leader-resource-image.png.webp"
+                        alt="">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">An L&D Leader's Cheat Sheet to Supercharge Learning With GenAI</h3>
+                    <a href="#" class="card-link">Download guide →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sec 9 -->
+    <section>
+        <div class="b-c">
+            <img src="../MEDIA/img1.webp" alt="" class="img1">
+            <img src="../MEDIA/img2.webp" alt="" class="img2">
+            <img src="../MEDIA/img3.webp" alt="" class="img3">
+            <img src="../MEDIA/img4.webp" alt="" class="img4">
+            <img src="../MEDIA/img5.webp" alt="" class="img5">
+            <img src="../MEDIA/img6.webp" alt="" class="img6">
+
+            <div class="learn">
+                <h2>What will learning do for your organization?</h2>
+            </div>
+            <div class="learn">
+                <p>See the impact of online learning for businesses. Let’s start on a plan that supports your goals.</p>
+            </div>
+            <div class="demo">
+                Request a demo
+            </div>
+
+            <div class="learn">
+                <p class="span">Small team? <span><a href="">Start with Team Plan.</a></span></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="known2">
+
+        <div>
+            <h4 class="head">About</h4>
+
+            <a href="">About us</a>
+            <a href="">Careers</a>
+            <a href="">Contact us</a>
+            <a href="">Blog</a>
+            <a href="">Investors</a>
+        </div>
+
+        <div>
+            <h4 class="head">Discover Udemy</h4>
+
+            <a href="">Get the app</a>
+            <a href="">Teach on Udemy</a>
+            <a href="">Plans and Pricing</a>
+            <a href="">Affiliate</a>
+            <a href="">Help and Support</a>
+        </div>
+
+        <div>
+            <h4 class="head">Udemy for Business</h4>
+
+            <a href="">Udemy Business</a>
+        </div>
+
+        <div>
+            <h4 class="head">Legal & Accessibility</h4>
+
+            <a href="">Accessibility statement</a>
+            <a href="">Privacy policy</a>
+            <a href="">Sitemap</a>
+            <a href="">Terms</a>
+        </div>
+
+        <div>
+            <img src="" alt="">
+        </div>
+    </div>
 </body>
+
 </html>

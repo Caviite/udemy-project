@@ -154,7 +154,6 @@ input {
     }
 }
 
-/* Tablet and mobile responsiveness */
 @media (max-width: 1024px) {
     .log {
         flex-direction: column;
@@ -204,7 +203,6 @@ input {
     }
 }
 
-/* Smaller mobile screens (e.g. iPhone SE, small Android phones) */
 @media (max-width: 480px) {
     .log h1 {
         font-size: 20px;
